@@ -398,8 +398,7 @@ footer {
     nav #menu-nav ul {
       float: right; }
       nav #menu-nav ul li {
-        float: left;
-        display: inline-block; }
+        float: left; }
   #about #personal {
     grid-template-areas: "photo bio";
     margin: 2.5em auto;
@@ -451,8 +450,7 @@ footer {
     nav #menu-nav ul {
       float: right; }
       nav #menu-nav ul li {
-        float: left;
-        display: inline-block; }
+        float: left; }
   #about #personal {
     grid-template-areas: "photo bio";
     margin: 2.5em auto;
@@ -503,6 +501,10 @@ footer {
     grid-template-areas: "bio bio"; }
     #about #personal #photo {
       display: none; }
+  #projects #project-cards div {
+    margin-bottom: 2.5em; }
+    #projects #project-cards div:last-childx {
+      margin-bottom: 0; }
   #skills ul {
     margin: 0 -35px;
     padding: 0;

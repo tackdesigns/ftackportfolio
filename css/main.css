@@ -462,6 +462,8 @@ footer {
     margin: 2.5em auto 0 auto; }
     #skills ul li {
       grid-template-columns: 12.5% auto; }
+  #projects .lg-heading {
+    margin-bottom: 2.5em; }
   #projects #project-cards {
     margin: 2.5em 0;
     padding: 0;

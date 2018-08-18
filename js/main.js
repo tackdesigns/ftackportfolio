@@ -91,7 +91,7 @@ form.onsubmit = () => {
     const sgHeaders = new Headers({
       "Content-Type": "application/json",
       Authorization:
-        "Bearer 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"
+        "Bearer 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"
     });
 
     fetch("https://api.sendgrid.com/v3/mail/send", {

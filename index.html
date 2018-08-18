@@ -185,6 +185,23 @@
             </div>
             <div>
                 <div class="img-card">
+                    <img src="./img/projects/roxx.png" alt="">
+                </div>
+                <h3>ROXX</h3>
+                <h4>Front End Development</h4>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>jQuery</li>
+                </ul>
+                <a href="http://roxx.be" target="_blank" class="visit-btn">
+                    <i class="far fa-arrow-alt-circle-right"></i>
+                    <p>View project</p>
+                </a>
+            </div>
+            <div>
+                <div class="img-card">
                     <img src="./img/projects/radioaccent.png" alt="">
                 </div>
                 <h3>Radio Accent</h3>
@@ -193,6 +210,7 @@
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>Wordpress</li>
+                    <li>Graphic Design</li>
                 </ul>
                 <a href="http://radioaccent.be" target="_blank" class="visit-btn">
                     <i class="far fa-arrow-alt-circle-right"></i>
@@ -259,13 +277,13 @@
         <h2 class="sm-heading">I'm always free for a new experience. Contact me and maybe we can create something beautiful.</h2>
         <div id="contact-form">
             <div>
-                <form>
+                <form id="form-send">
                     <div>
-                        <label for="frm_name">Your name</label>
+                        <label for="frm_name">Your name *</label>
                         <input type="text" placeholder="Your name" name="frm_name" id="frm_name">
                     </div>
                     <div>
-                        <label for="frm_mail">Your e-mail adress</label>
+                        <label for="frm_mail">Your e-mail adress *</label>
                         <input type="text" placeholder="Your e-mail" name="frm_mail" id="frm_mail">
                     </div>
                     <div>
@@ -273,12 +291,16 @@
                         <input type="text" placeholder="Your telephone number" name="frm_phone" id="frm_phone">
                     </div>
                     <div>
-                        <label for="frm_message">Your message</label>
+                        <label for="frm_message">Your message *</label>
                         <textarea placeholder="Your message" name="frm_message" id="frm_message"></textarea>
                     </div>
 
                     <input type="submit" value="Send message">
                 </form>
+                <div id="mail-success">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Thanks for your message. We will contact you ASAP.</p>
+                </div>
             </div>
         </div>
     </section>

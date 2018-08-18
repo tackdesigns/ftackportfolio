@@ -4,6 +4,8 @@ const menu = document.querySelector("#menu-nav");
 const header = document.querySelector("#menu-hdr");
 const scrollIcon = document.querySelector("#scroll-icon");
 const navLinks = document.querySelectorAll(".nav-link");
+const form = document.querySelector("#form-send");
+const success = document.querySelector("#mail-success");
 
 // Set variables
 let showMenu = false;
@@ -38,6 +40,80 @@ menuBtn.addEventListener("click", toggleMenu);
     console.log("Last button clicked");
   });
 })();
+
+// Listen form form submit
+form.onsubmit = () => {
+  // Get all the elements
+  const el = form.elements;
+
+  // CHeck for empty fields
+  if (el[0].value == "" || el[1].value == "" || el[3].value == "") {
+    alert(
+      "Not all the required fields are filled in. Please check the form and try again"
+    );
+  } else {
+    // Create the content
+    var payload = {
+      personalizations: [
+        {
+          to: [
+            {
+              email: "tack.fabian@gmail.com"
+            }
+          ],
+          subject: "A message was send via tack-designs.be"
+        }
+      ],
+      from: {
+        email: el[1].value
+      },
+      content: [
+        {
+          type: "text/plain",
+          value:
+            "A message was send via your website from " +
+            el[0].value +
+            " with the message " +
+            el[3].value
+        },
+        {
+          type: "text/html",
+          value:
+            "A message was send via your website from " +
+            el[0].value +
+            " with the message<br>" +
+            el[3].value
+        }
+      ]
+    };
+
+    // Create Sendgrid Headers
+    const sgHeaders = new Headers({
+      "Content-Type": "application/json",
+      Authorization:
+        "Bearer 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"
+    });
+
+    fetch("https://api.sendgrid.com/v3/mail/send", {
+      method: "POST",
+      headers: sgHeaders,
+      body: JSON.stringify(payload)
+    })
+      .then(function(res) {
+        return res.json();
+      })
+      .then(function(data) {
+        console.log(JSON.stringify(data));
+      });
+
+    // Hide form
+    form.classList.add("hide");
+    success.classList.add("show");
+  }
+
+  // Prevent reloading page
+  return false;
+};
 
 // Toggle menu function
 function toggleMenu() {

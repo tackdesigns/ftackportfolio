@@ -1,0 +1,284 @@
+// Widescreen
+@include mediaXl {
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading {
+      font-size: 6rem;
+    }
+
+    &.sm-heading {
+      margin-bottom: 2rem;
+      padding: 0.2rem 1rem;
+    }
+  }
+
+  #main {
+    h1 {
+      margin-top: 25vh;
+    }
+  }
+
+  .menu-btn {
+    visibility: hidden;
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: 40% auto;
+
+    #branding {
+      text-align: left;
+      font-size: 1.15rem;
+      padding: 1.15em 1.25em 0 1.25em;
+    }
+
+    #menu-nav {
+      ul {
+        float: right;
+        li {
+          float: left;
+        }
+      }
+    }
+  }
+
+  #about {
+    #personal {
+      grid-template-areas: "photo bio";
+      margin: 2.5em auto;
+      display: grid;
+      grid-template-columns: 17.5% auto;
+      max-width: 1170px;
+      #photo {
+        justify-items: center;
+        align-self: center;
+      }
+      #bio {
+        justify-items: center;
+        align-self: center;
+      }
+    }
+    #skills {
+      max-width: 1170px;
+      margin: 2.5em auto 0 auto;
+      ul {
+        li {
+          grid-template-columns: 1fr 11fr;
+          grid-gap: 1.5em;
+          div:nth-child(1) {
+            justify-items: center;
+            align-self: center;
+          }
+        }
+      }
+    }
+  }
+
+  #projects {
+    #project-cards {
+      margin: 2.5em auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 2.5em;
+      max-width: 1170px;
+    }
+  }
+
+  #contact {
+    #contact-form {
+      margin: 2.5em auto 0 auto;
+      max-width: 1170px;
+      padding: 0;
+    }
+  }
+}
+
+// Desktops & laptops
+@include mediaLg {
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading {
+      font-size: 6rem;
+    }
+
+    &.sm-heading {
+      margin-bottom: 2rem;
+      padding: 0.2rem 1rem;
+    }
+  }
+
+  #main {
+    h1 {
+      margin-top: 25vh;
+    }
+  }
+
+  .menu-btn {
+    visibility: hidden;
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: 40% auto;
+
+    #branding {
+      text-align: left;
+      font-size: 1.15rem;
+      padding: 1.15em 1.25em 0 1.25em;
+    }
+
+    #menu-nav {
+      ul {
+        float: right;
+        li {
+          float: left;
+        }
+      }
+    }
+  }
+
+  #about {
+    #personal {
+      grid-template-areas: "photo bio";
+      margin: 2.5em auto;
+      display: grid;
+      grid-template-columns: 20% auto;
+      max-width: 1170px;
+      #photo {
+        justify-items: center;
+        align-self: center;
+      }
+      #bio {
+        justify-items: center;
+        align-self: center;
+      }
+    }
+    #skills {
+      max-width: 1170px;
+      margin: 2.5em auto 0 auto;
+      ul {
+        li {
+          grid-template-columns: 1fr 11fr;
+          grid-gap: 1.5em;
+          div:nth-child(1) {
+            justify-items: center;
+            align-self: center;
+          }
+        }
+      }
+    }
+  }
+
+  #projects {
+    .lg-heading {
+      margin-bottom: 2.5em;
+    }
+    #project-cards {
+      margin: 2.5em 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2.5em;
+      width: 100%;
+    }
+  }
+
+  #contact {
+    #contact-form {
+      margin: 2.5em auto 0 auto;
+      max-width: 1170px;
+      padding: 0;
+    }
+  }
+}
+
+// Tablets & small laptops
+@include mediaMd {
+  header {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &.scrolled {
+      background: darken($primary, 3);
+      padding: 0;
+    }
+
+    #branding {
+      width: 100%;
+      display: block;
+      text-align: center;
+      font-size: 1.25rem;
+      background: rgba(darken($primary, 25), 0.9);
+      padding: 1.2em 1em 1em 1em;
+    }
+
+    #menu-nav {
+      display: none;
+      height: 100vh;
+      width: 100%;
+      background: rgba(darken($primary, 25), 0.9);
+
+      &.show {
+        display: block;
+      }
+    }
+  }
+
+  #main {
+    h1 {
+      margin-top: 25vh;
+    }
+  }
+
+  #about {
+    #personal {
+      grid-template-areas: "bio bio";
+      padding: 1.5em;
+
+      #photo {
+        display: none;
+      }
+
+      #bio {
+        padding: 0;
+        text-align: center;
+      }
+    }
+    #skills {
+      ul {
+        li {
+          grid-template-columns: 2fr 10fr;
+          grid-gap: 1.5em;
+        }
+      }
+    }
+  }
+
+  #projects {
+    #project-cards {
+      div {
+        margin-bottom: 2.5em;
+        &:last-childx {
+          margin-bottom: 0;
+        }
+        h3 {
+          margin-top: -1.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Smartphone
+@include mediaSm {
+}

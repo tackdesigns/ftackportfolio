@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio for Fabian Tack - Tack Designs",
+  "main": "index.js",
+  "homepage": "https://tackdesigns.github.io/ftackportfolio",
+  "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
+    "gh-pages": "^1.2.0",
+    "node-sass": "^4.9.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [
+    "portfolio",
+    "design",
+    "html",
+    "css",
+    "fabian",
+    "tack",
+    "tack",
+    "fabian"
+  ],
+  "author": "Fabian Tack",
+  "license": "MIT"
+}

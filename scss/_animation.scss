@@ -1,0 +1,124 @@
+@keyframes jumpArrow {
+  0% {
+    bottom: -25px;
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+    bottom: -32.5px;
+  }
+  50% {
+    opacity: 1;
+    bottom: -40px;
+  }
+  75% {
+    opacity: 0.5;
+    bottom: -47.5px;
+  }
+  100% {
+    opacity: 0;
+    bottom: -50px;
+  }
+}
+
+@keyframes underLineButton {
+  0% {
+    border-bottom: 0px solid $text;
+  }
+  50% {
+    border-bottom: 1px solid $text;
+  }
+  100% {
+    border-bottom: 2px solid $text;
+  }
+}
+
+@keyframes successIcon {
+  0% {
+    opacity: 0;
+    transform: scaleX(1) scaleY(1);
+  }
+  0% {
+    transform: scaleX(1) scaleY(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scaleX(1.5) scaleY(1.5);
+  }
+  100% {
+    opacity: 0.75;
+    transform: scaleX(1) scaleY(1);
+  }
+}
+
+@-moz-keyframes successIcon {
+  0% {
+    opacity: 0;
+    -moz-transform: scaleX(1) scaleY(1);
+  }
+  0% {
+    -moz-transform: scaleX(1) scaleY(1);
+  }
+  50% {
+    opacity: 0.75;
+    -moz-transform: scaleX(1.5) scaleY(1.5);
+  }
+  100% {
+    opacity: 0.75;
+    -moz-transform: scaleX(1) scaleY(1);
+  }
+}
+
+@-webkit-keyframes successIcon {
+  0% {
+    opacity: 0;
+    -webkit-transform: scaleX(1) scaleY(1);
+  }
+  0% {
+    -webkit-transform: scaleX(1) scaleY(1);
+  }
+  50% {
+    opacity: 0.75;
+    -webkit-transform: scaleX(1.5) scaleY(1.5);
+  }
+  100% {
+    opacity: 0.75;
+    -webkit-transform: scaleX(1) scaleY(1);
+  }
+}
+
+@-o-keyframes successIcon {
+  0% {
+    opacity: 0;
+    -o-transform: scaleX(1) scaleY(1);
+  }
+  0% {
+    -o-transform: scaleX(1) scaleY(1);
+  }
+  50% {
+    opacity: 0.75;
+    -o-transform: scaleX(1.5) scaleY(1.5);
+  }
+  100% {
+    opacity: 0.75;
+    -o-transform: scaleX(1) scaleY(1);
+  }
+}
+
+@-ms-keyframes successIcon {
+  0% {
+    opacity: 0;
+    -ms-transform: scaleX(1) scaleY(1);
+  }
+  0% {
+    -ms-transform: scaleX(1) scaleY(1);
+  }
+  50% {
+    opacity: 0.75;
+    -ms-transform: scaleX(1.5) scaleY(1.5);
+  }
+  100% {
+    opacity: 0.75;
+    -ms-transform: scaleX(1) scaleY(1);
+  }
+}

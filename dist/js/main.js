@@ -52,9 +52,53 @@ form.onsubmit = () => {
       "Not all the required fields are filled in. Please check the form and try again"
     );
   } else {
-    // Hide form
-    form.classList.add("hide");
-    success.classList.add("show");
+    // Send a request to the script & check for response
+    let data =
+      "name=" +
+      el[0].value +
+      "&mail=" +
+      el[1].value +
+      "&phone=" +
+      el[2].value +
+      "&msg=" +
+      el[3].value;
+
+    // Start the connection
+    let xhr = new XMLHttpRequest();
+
+    // Set the URK
+    let url = "https://apps.kustboys.be/tackdesigns/mail.php";
+
+    // Open the connection
+    xhr.open("POST", url, true);
+
+    // Set the correct Request HEader
+    xhr.setRequestHeader(
+      "Content-Type",
+      "application/x-www-form-urlencoded; charset=UTF-8"
+    );
+
+    // Send the data
+    xhr.send(data);
+
+    // Check if onReady
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        // Decode the JSON
+        let resp = JSON.parse(xhr.responseText);
+
+        // Check for errors from script
+        if (resp.error) {
+          alert(
+            "There was something wrong with sending your message. Please try again later"
+          );
+        } else {
+          // Hide form
+          form.classList.add("hide");
+          success.classList.add("show");
+        }
+      }
+    };
   }
 
   // Prevent reloading page
